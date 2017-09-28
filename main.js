@@ -1,12 +1,12 @@
 let app = new Vue({
    el: '#app',
    data: {
-      msg: 'Hello world',
+      user: 'John deo',
    },
    
    computed: {
-      reverseMsg: function() {
-         return this.msg.split('').reverse().join('');
+      userStatus: function() {
+         return this.user + ' logged in at ' + new Date().toLocaleString();
       }
    }
 });
