@@ -1,13 +1,12 @@
 let app = new Vue({
    el: '#app',
    data: {
-      width: 200,
-      height: 200,
+      msg: 'Hello world',
    },
    
    computed: {
-      area: function() {
-         return this.width * this.height;
+      reverseMsg: function() {
+         return this.msg.split('').reverse().join('');
       }
-   },
+   }
 });
