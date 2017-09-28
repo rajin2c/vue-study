@@ -1,12 +1,13 @@
 let app = new Vue({
    el: '#app',
    data: {
-      user: 'John deo',
+       user: 'nivin',
+       email: 'nivin@in.com',
    },
    
    computed: {
-      userStatus: function() {
-         return this.user + ' logged in at ' + new Date().toLocaleString();
+      userDetails: function() {
+         return this.user + ' ' + this.email;
       }
-   }
+   },
 });
