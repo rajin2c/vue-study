@@ -1,13 +1,13 @@
-let user = new Vue({
-   el: '#user',
+let film = new Vue({
+   el: '#film',
    data: {
-      firstName: 'John',
-      lastName: 'Deo',
+      name: 'Robot',
+      director: 'Shankar',
    },
    
    computed: {
-      fullName: function() {
-         return this.firstName + ' ' + this.lastName;
-      }
+      filmDetails: function() {
+         return this.name + '-' + this.director ;
+      },
    }
 });
