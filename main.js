@@ -1,13 +1,18 @@
 let app = new Vue({
    el: '#app',
    data: {
-       user: 'nivin',
-       email: 'nivin@in.com',
+      firstName: 'John',
+      lastName: 'Deo',
+      fullName: 'John Deo',
    },
    
-   computed: {
-      userDetails: function() {
-         return this.user + ' ' + this.email;
+   watch: {
+      firstName: function(newFirstName) {
+         this.fullName = newFirstName + ' ' + this.lastName;
+      },
+      
+      lastName: function(newLastName) {
+         this.fullName = this.firstName + ' ' + newLastName;
       }
-   },
+   }
 });
