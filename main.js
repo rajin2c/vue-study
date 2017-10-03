@@ -1,18 +1,13 @@
-let film = new Vue({
-   el: '#film',
+let user = new Vue({
+   el: '#user',
    data: {
-      name: 'Parava',
-      director: 'Soubin Thahir',
-      details: 'Parava - Soubin Thahir',
+      firstName: 'John',
+      lastName: 'Deo',
    },
    
-   watch: {
-      name: function(newFilmName) {
-         this.details = newFilmName + '-' + this.director;
-      },
-      
-      director: function(newDirectorName) {
-         this.details = this.name + '-' + newDirectorName;
+   computed: {
+      fullName: function() {
+         return this.firstName + ' ' + this.lastName;
       }
    }
 });
