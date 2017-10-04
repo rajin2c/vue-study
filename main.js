@@ -1,21 +1,23 @@
-let user = new Vue({
-   el: '#user',
+let film = new Vue({
+   el: '#film',
    data: {
-      firstName: 'John',
-      lastName: 'Deo',
+      name: 'vandanam',
+      director: 'unknown',
    },
    
    computed: {
-      fullName: {
+      filmDetails: { 
+         
          get: function() {
-            return this.firstName + ' ' + this.lastName;
+            return this.name + ' ' + this.director;
          },
          
-         set: function(newFullName) {
-            let fullName = newFullName.split(' ');
-            this.firstName = fullName[0]; // Anjela
-            this.lastName = fullName[1]; // John
+         set: function(newFilmDetails) {
+            let filmDetails = newFilmDetails.split(' ');
+            this.name = filmDetails[0];
+            this.director = filmDetails[1];
          }
+         
       }
    }
 });
