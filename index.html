@@ -5,11 +5,15 @@
     </head>
     <body>
         
-        <div id="film">
-             <p>Film Details : {{ filmDetails }}</p>
+        <div id="ansme">
+            <p>Ask any yes or no question:</p>
+            <input type="text" v-model="question">
+            <p>{{ answer }}</p>
         </div>
         
         <script src="https://unpkg.com/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
         <script src="main.js"></script>
     </body>
 </html>

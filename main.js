@@ -1,23 +1,41 @@
-let film = new Vue({
-   el: '#film',
+let ansme = new Vue({
+   el: '#ansme',
    data: {
-      name: 'vandanam',
-      director: 'unknown',
+      question: '',
+      answer: 'Please ask any question',
    },
    
-   computed: {
-      filmDetails: { 
-         
-         get: function() {
-            return this.name + ' ' + this.director;
-         },
-         
-         set: function(newFilmDetails) {
-            let filmDetails = newFilmDetails.split(' ');
-            this.name = filmDetails[0];
-            this.director = filmDetails[1];
-         }
-         
+   watch: {
+      question: function(question) {
+         this.answer = 'Waiting for stop typing...',
+         this.getAnswer();
       }
+   },
+   
+   methods: {
+      getAnswer: _.debounce(
+         function() {
+            let hasQuestionMark = (this.question.indexOf('?') == -1) ? false : true;
+            
+            if (!hasQuestionMark) {
+               this.answer = 'Please put a question mark';
+               return;
+            }
+            
+            this.answer = 'Thinking...';
+            let self = this;
+            
+            axios.get('https://yesno.wtf/api')
+            
+               .then(function(response) {
+                  self.answer = _.upperCase(response.data.answer);
+               })
+               
+               .catch( function(error) {
+                  self.answer = 'Unable to process. Please try again later';
+               });
+         }
+      , 1000)
+      
    }
 });
