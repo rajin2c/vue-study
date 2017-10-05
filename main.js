@@ -1,10 +1,10 @@
-let app = new Vue ({
+Vue.component('list', {
+   template: '<ul class="a b"><li>Mango</li><li>Apple</li><li>Pappaya</li></ul>'
+});
+
+let app = new Vue({
    el: '#app',
    data: {
-      paraActivate: '',
-      paraDeactivate: '',
-      paraCapitalize: '',
-      paraUppercase: '',
-      paraLowercase: '',
+      isActive: true,
    }
 });

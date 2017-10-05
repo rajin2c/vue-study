@@ -7,12 +7,7 @@
     <body>
         
       <div id="app">
-          <p :class="[paraActivate, paraDeactivate, paraCapitalize, paraUppercase, paraLowercase]">this is an example paragraph</p>
-          <button @click="paraActivate = 'active'">Activate</button>
-          <button @click="paraDeactivate = 'deactivate'">Deactivate</button>
-          <button @click="paraCapitalize = 'capitalize'">Capitalize</button>
-          <button @click="paraUppercase = 'uppercase'">Uppercase</button>
-          <button @click="paraLowercase = 'lowercase'">Lowercase</button>
+          <list :class="{ active: isActive }"></list>
       </div>
       
         <script src="https://unpkg.com/vue"></script>
