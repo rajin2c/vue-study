@@ -1,6 +1,10 @@
 let app = new Vue ({
    el: '#app',
    data: {
-      paraClass: '',
+      paraActivate: '',
+      paraDeactivate: '',
+      paraCapitalize: '',
+      paraUppercase: '',
+      paraLowercase: '',
    }
 });

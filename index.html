@@ -7,12 +7,12 @@
     <body>
         
       <div id="app">
-          <p :class="[paraClass]">this is an example paragraph</p>
-          <button @click="paraClass = 'active'">Activate</button>
-          <button @click="paraClass = 'deactivate'">Deactivate</button>
-          <button @click="paraClass = 'capitalize'">Capitalize</button>
-          <button @click="paraClass = 'uppercase'">Uppercase</button>
-          <button @click="paraClass = 'lowercase'">Lowercase</button>
+          <p :class="[paraActivate, paraDeactivate, paraCapitalize, paraUppercase, paraLowercase]">this is an example paragraph</p>
+          <button @click="paraActivate = 'active'">Activate</button>
+          <button @click="paraDeactivate = 'deactivate'">Deactivate</button>
+          <button @click="paraCapitalize = 'capitalize'">Capitalize</button>
+          <button @click="paraUppercase = 'uppercase'">Uppercase</button>
+          <button @click="paraLowercase = 'lowercase'">Lowercase</button>
       </div>
       
         <script src="https://unpkg.com/vue"></script>
