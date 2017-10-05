@@ -1,6 +1,7 @@
 let app = new Vue ({
    el: '#app',
    data: {
-      isParaActive: false,
+      isActive: false,
+      isCapitalize: true,
    }
 });

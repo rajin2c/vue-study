@@ -3,10 +3,11 @@
     <head>
         <title>Vue study</title>
     </head>
+    <link rel="stylesheet" href="main.css"/>
     <body>
         
       <div id="app">
-          <p :class="{ para: isParaActive }">This is example paragraph</p>
+          <p :class="{ active: isActive, capitalize: isCapitalize }">this is an example paragraph</p>
       </div>
       
         <script src="https://unpkg.com/vue"></script>
