@@ -5,3 +5,16 @@
 .capitalize {
     text-transform: capitalize;
 }
+
+.deactivate {
+    color: red;
+    text-decoration: line-through;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
