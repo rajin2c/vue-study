@@ -7,7 +7,7 @@
     <body>
         
       <div id="app">
-          <p :style="para">Inline style binding</p>
+            <p v-for="(value, key, index) in user">{{ index }} . {{ key }}: {{ value }}</p>
       </div>
       
         <script src="https://unpkg.com/vue"></script>
