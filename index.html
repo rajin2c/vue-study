@@ -3,14 +3,13 @@
     <head>
         <title>Vue study</title>
     </head>
-    <link rel="stylesheet" href="main.css"/>
+    <!--<link rel="stylesheet" href="main.css"/>-->
     <body>
         
-      <div id="app">
-            <ul>
-                <wish v-for="wish in wishes" :wish="wish"></wish>
-            </ul>
-      </div>
+        <div id="test">
+            <button @click="counter++">Add</button>
+            <p>You clicked it {{ counter }} times</p>
+        </div>
       
         <script src="https://unpkg.com/vue"></script>
         <script src="main.js"></script>
