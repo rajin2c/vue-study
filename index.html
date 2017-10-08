@@ -6,9 +6,8 @@
     <!--<link rel="stylesheet" href="main.css"/>-->
     <body>
         
-        <div id="test">
-            <button @click="counter++">Add</button>
-            <p>You clicked it {{ counter }} times</p>
+        <div id="greet">
+            <button @click="greet('Anjela', $event)">Greet</button>
         </div>
       
         <script src="https://unpkg.com/vue"></script>

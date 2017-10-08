@@ -1,6 +1,18 @@
-let test = new Vue ({
-   el: '#test',
+let greet = new Vue({
+   el: '#greet',
    data: {
-      counter: 0,
+      user: {
+         name: 'John Deo',
+      },
+   },
+   
+   methods: {
+      greet: function(name, event) {
+         alert('Hi ' + name);
+         
+         if(event) {
+            alert(event.target.tagName);
+         }
+      }
    }
 });
