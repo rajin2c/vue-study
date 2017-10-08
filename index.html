@@ -7,7 +7,9 @@
     <body>
         
       <div id="app">
-            <p v-for="(value, key, index) in user">{{ index }} . {{ key }}: {{ value }}</p>
+            <ul>
+                <wish v-for="wish in wishes" :wish="wish"></wish>
+            </ul>
       </div>
       
         <script src="https://unpkg.com/vue"></script>
