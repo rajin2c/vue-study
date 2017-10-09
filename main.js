@@ -1,18 +1,9 @@
-let greet = new Vue({
-   el: '#greet',
-   data: {
-      user: {
-         name: 'John Deo',
-      },
-   },
+let keyboard = new Vue({
+   el: '#keyboard',
    
    methods: {
-      greet: function(name, event) {
-         alert('Hi ' + name);
-         
-         if(event) {
-            alert(event.target.tagName);
-         }
+      msg: function() {
+         alert('You are pressed enter!');
       }
    }
 });
