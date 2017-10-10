@@ -1,22 +1,23 @@
 let app = new Vue({
-   el: '#app',
+   el: "#app",
    data: {
       user: {
          email: '',
          password: '',
       },
       notify: '',
-      isSignedIn: false,
+      isLogedIn: false,
    },
    
    methods: {
-      signin: function() {
-         if(this.user.email == 'email@example.com' && this.user.password == 'pass') {
-            this.isSignedIn = true;
-            return this.notify = 'Done! You are successfully signed in';
+      logIn: function() {
+         if(this.user.email == 'xyz@in.com' && this.user.password == '12345') {
+            this.isLogedIn = true;
+            return this.notify = 'You are successfully logged in';
          }
-         
-         return this.notify = 'Oops! Invalid sign in credentials. Please try again';
+         return this.notify = 'Sorry, wrong credentials!';
       }
    }
+  
+   
 })
