@@ -1,11 +1,22 @@
-Vue.config.keyCodes.arrows = [37, 38, 39, 40];
-
-let keyboard = new Vue({
-   el: '#keyboard',
+let app = new Vue({
+   el: '#app',
+   data: {
+      user: {
+         email: '',
+         password: '',
+      },
+      notify: '',
+      isSignedIn: false,
+   },
    
    methods: {
-      msg: function() {
-         alert('You are pressed a arrow key!');
-      },
+      signin: function() {
+         if(this.user.email == 'email@example.com' && this.user.password == 'pass') {
+            this.isSignedIn = true;
+            return this.notify = 'Done! You are successfully signed in';
+         }
+         
+         return this.notify = 'Oops! Invalid sign in credentials. Please try again';
+      }
    }
-});
+})
