@@ -1,11 +1,11 @@
-Vue.config.keyCodes.numkeys = [112,113,114,115,116,117,118,119,120];
+Vue.config.keyCodes.arrows = [37, 38, 39, 40];
 
-let keyBoard = new Vue({
-   el: '#keyBoard',
+let keyboard = new Vue({
+   el: '#keyboard',
    
    methods: {
       msg: function() {
-         alert('You are pressed a num key!');
+         alert('You are pressed a arrow key!');
       },
    }
 });

@@ -6,9 +6,8 @@
     <!--<link rel="stylesheet" href="main.css"/>-->
     <body>
         
-        <div id="keyBoard">
-             <input @keyup.numkeys="msg" placeholder="press any num key">
-            
+        <div id="keyboard">
+            <input @keyup.arrows="msg" placeholder="Press any arrow">
         </div>
       
         <script src="https://unpkg.com/vue"></script>
