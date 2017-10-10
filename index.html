@@ -6,20 +6,20 @@
     <!--<link rel="stylesheet" href="main.css"/>-->
     <body>
         
-        <div id="app">
+        <div id="chat">
             
-             <h4>Log in</h4>
-             <p>{{ notify }}</p>
-             
-             <form v-if="!isLogedIn">
-                 <input v-model="user.email" placeholder="Enter email"/>
-                 <input v-model="user.password" placeholder="Enter password" type="password"/>
-                 <button @click.prevent="logIn">Submit</button>
-             </form>
-             
+            <h4>Chat</h4>
+            <p>{{ notify }}</p>
+            
+            <ul>
+                <li v-for="chat in chats">{{ chat }}</li>
+            </ul>
+            <textarea v-model="message" placeholder="User enter key to send message"></textarea>
+            <button @click.prevent="send">Send</button>
+            
         </div>
       
         <script src="https://unpkg.com/vue"></script>
         <script src="main.js"></script>
     </body>
-</html 
+</html>

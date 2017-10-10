@@ -1,23 +1,23 @@
 let app = new Vue({
-   el: "#app",
+   el: '#chat',
    data: {
-      user: {
-         email: '',
-         password: '',
-      },
+      chats: [],
+      message: '',
       notify: '',
-      isLogedIn: false,
    },
    
    methods: {
-      logIn: function() {
-         if(this.user.email == 'xyz@in.com' && this.user.password == '12345') {
-            this.isLogedIn = true;
-            return this.notify = 'You are successfully logged in';
+      send: function() {
+         
+         if (!this.message) {
+            return this.notify = 'Please enter any message';
          }
-         return this.notify = 'Sorry, wrong credentials!';
+         
+         this.chats.push(this.message);
+         
+         // Form clear
+         this.notify = '';
+         this.message = '';
       }
    }
-  
-   
-})
+});
