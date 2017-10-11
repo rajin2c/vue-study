@@ -4,22 +4,117 @@
         <title>Vue study</title>
     </head>
     <!--<link rel="stylesheet" href="main.css"/>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.css">
     <body>
         
-        <div id="chat">
+        <div id="profile">
             
-            <h4>Chat</h4>
-            <p>{{ notify }}</p>
-            
-            <ul>
-                <li v-for="chat in chats">{{ chat }}</li>
-            </ul>
-            <textarea v-model="message" placeholder="User enter key to send message"></textarea>
-            <button @click.prevent="send">Send</button>
-            
+            <div class="container">
+                <h4 class="title">Profile</h4>
+                
+                <div class="columns">
+                    
+                    <div class="column">
+                        <div class="box">
+                            <div class="field">
+                                <label class="label">Name</label>
+                                <div class="control">
+                                    <input class="input" v-model="name" placeholder="Name">
+                                </div>
+                            </div>
+                            
+                            <div class="field">
+                                <label class="label">About</label>
+                                <textarea class="textarea" v-model="about" placeholder="About"></textarea>
+                            </div>
+                            
+                            <div class="field">
+                                <label class="label">Gender</label>
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="gender" value="male" v-model="gender" checked="checked"> Male
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="gender" value="female" v-model="gender"> Female
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" value="true" v-model="subscription">
+                                        Please send newsletters
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="field">
+                                <label class="label">Country</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select v-model="country">
+                                            <option value="india">India</option>
+                                            <option value="us">US</option>
+                                            <option value="canada">Canada</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="field">
+                                <label class="label">Interested topics</label>
+                                <div class="control">
+                                    <div class="select is-multiple">
+                                        <select v-model="interests" multiple="multiple">
+                                            <option value="technology">Technology</option>
+                                            <option value="science">Science</option>
+                                            <option value="lifestyle">Lifestyle</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="box">
+                            <table class="table is-striped">
+                                <tr>
+                                    <th>Name</th>
+                                    <td>{{ name }}</td>
+                                </tr>
+                                <tr>
+                                    <th>About</th>
+                                    <td>{{ about }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Gender</th>
+                                    <td>{{ _.capitalize(gender) }}</td>
+                                </tr> 
+                                <tr>
+                                    <th>Do you want newsletters?</th>
+                                    <td>{{ subscription ? 'Yes' : 'No' }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Country</th>
+                                    <td>{{ _.capitalize(country) }}</td>
+                                </tr> 
+                                <tr>
+                                    <th>Interested topics</th>
+                                    <td><p v-for="interest in interests">{{ _.capitalize(interest) }}</p></td>
+                                </tr> 
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
         </div>
       
         <script src="https://unpkg.com/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
         <script src="main.js"></script>
     </body>
 </html>

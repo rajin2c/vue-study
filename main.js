@@ -1,23 +1,12 @@
-let app = new Vue({
-   el: '#chat',
+let profile = new Vue({
+   el: '#profile',
    data: {
-      chats: [],
-      message: '',
-      notify: '',
+      name: 'John Deo',
+      about: 'I write codes',
+      gender: 'male',
+      subscription: false,
+      country: 'india',
+      interests: ['technology'],
    },
    
-   methods: {
-      send: function() {
-         
-         if (!this.message) {
-            return this.notify = 'Please enter any message';
-         }
-         
-         this.chats.push(this.message);
-         
-         // Form clear
-         this.notify = '';
-         this.message = '';
-      }
-   }
 });
