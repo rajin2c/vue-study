@@ -1,12 +1,15 @@
-let profile = new Vue({
-   el: '#profile',
+let student = new Vue({
+   el: '#student',
    data: {
-      name: 'John Deo',
-      about: 'I write codes',
-      gender: 'male',
-      subscription: false,
-      country: 'india',
-      interests: ['technology'],
+       student: {
+           name: '',
+           address: '',
+           gender: 'male',
+           mark: {
+               physics: 0,
+               chemistry: 0,
+               maths: 0,
+           },
+       },
    },
-   
 });
