@@ -1,6 +1,5 @@
-let app = new Vue({
-   el: '#app',
-   data: {
-       gender: '',
-   },
+
+// Site
+let site = new Vue({
+   el: '#site',
 });

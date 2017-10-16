@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.css">
     <body>
     
-        <div id="app">
-            <input v-model.trim="gender">
-            {{ gender }}
+        <div id="site">
+            <site-header></site-header>
+            <site-content></site-content>
+            <site-footer></site-footer>
         </div>
       
         <script src="https://unpkg.com/vue"></script>
         <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+        <script src="components/site/header.js"></script>
+        <script src="components/site/content.js"></script>
+        <script src="components/site/footer.js"></script>
         <script src="main.js"></script>
     </body>
 </html>
