@@ -1,36 +1,15 @@
 
 // Components
-let header = {
-   data: function() {
-      return {
-         title: 'This is a heading',
-      }
-   },
-   template: '<div class="title"><h1>{{title}}</h1></div>',
-};
-
-let content = {
-   props: ['contentData'],
-   template: '<div><p>{{ contentData }}</p></div>',
-};
-
-let footer = {
-   props: ['copyrightDate'],
-   template: '<div><p>Copyright @ {{ copyrightDate }}</p></div>',
+let test = {
+   props: ['num1', 'num2'],
+   template: '<div><p>{{ typeof num1 }}</p><p>{{ typeof num2 }}</p></div>',
 };
 
 // Instance
-let site = new Vue({
-   el: '#site',
-   data: {
-      copyright: {
-         date: 2019,
-      }
-   },
+let app = new Vue({
+   el: '#app',
    components: {
-      'site-header': header,
-      'site-content':content,
-      'site-footer': footer,
+      'test': test,
    },
 });
 
