@@ -1,15 +1,17 @@
 
 // Components
-let test = {
-   props: ['num1', 'num2'],
-   template: '<div><p>{{ typeof num1 }}</p><p>{{ typeof num2 }}</p></div>',
-};
+Vue.component('counter', {
+   props: ['defaultLike'],
+   data: function() {
+      return {
+         like: this.defaultLike,
+      }
+   },
+   template: '<div><p>Likes: {{ like }}</p><button @click="like++">Like</button></div>',
+});
 
 // Instance
 let app = new Vue({
    el: '#app',
-   components: {
-      'test': test,
-   },
 });
 
