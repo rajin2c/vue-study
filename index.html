@@ -8,7 +8,8 @@
     <body>
     
         <div id="app">
-            <counter default-like="0"></counter>
+            <button @click="increaseLike">Like</button>
+            <counter :default-like="initialLike"></counter>
         </div>
       
         <script src="https://unpkg.com/vue"></script>

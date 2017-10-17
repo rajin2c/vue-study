@@ -2,16 +2,25 @@
 // Components
 Vue.component('counter', {
    props: ['defaultLike'],
-   data: function() {
-      return {
-         like: this.defaultLike,
+   computed: {
+      like: function() {
+         return this.defaultLike * 2;
       }
    },
-   template: '<div><p>Likes: {{ like }}</p><button @click="like++">Like</button></div>',
+   template: '<div><p>Likes: {{ like }}</p></div>',
 });
 
 // Instance
 let app = new Vue({
    el: '#app',
+   data: {
+      initialLike: 0,
+   },
+   
+   methods: {
+      increaseLike: function() {
+         this.initialLike++;
+      }
+   }
 });
 
